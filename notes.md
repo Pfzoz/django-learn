@@ -4,7 +4,7 @@
 
 Getting started with a Django project: django-admin startproject 'name'
 
-Running server: python3 manage.py runserver
+Running server: python3 manage.py runserver  
 Creating apps: python3 manage.py startapp 'name'
 
 ### Apps
@@ -14,13 +14,15 @@ Django will require you to specify that new apps are 'installed'.
 
 ### Views
 
-Are python functions/actions that take http responses as arguments and also returns http responses, such as HTML documents.
-
+Are python functions/actions that take http responses as arguments and also returns http responses, such as HTML documents.  
 For an instance, returning HttpResponse with a string will write directly into the web page's html.
+
+*urls.py* holds the paths for the urls, and in the apps it is possible to specify the view that will manipulate the HttpResponse of such urls.  
+On the main urls.py created you can specify apps' urls by adding include("app_urls_path")
 
 ### Templates
 
-Are HTML or other-like structures that can be loaded by Django. The templates .html files are located in the templates folder in the specific app.
+Are HTML or alike structures that can be loaded by Django. The templates .html files are located in the templates folder in the specific app.
 
 ### Models
 
@@ -38,6 +40,7 @@ Migration-related commands:
 > migrate: applies/unapplies migrations.  
 > sqlmigrate: displays SQL statements for migration.
 
-## QuerySets
+## Models & QuerySets
+
 
 Are collections of data from a database.
